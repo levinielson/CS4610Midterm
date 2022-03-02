@@ -7,14 +7,13 @@ export const Question3 = () => {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(async () => {
-    const { resource } = await api.get('/transactions');
-    console.log(resource);
-    setTransactions(resource);
+    const resource = await api.get('/transactions');
+    setTransactions(resource.transactions);
   }, [])
 
   return (
     <div>
-      <div>Render your transactions here</div>;
+      <div>Render your transactions here</div>
       {transactions.map((transaction) => (
         <Transaction transaction={transaction} key={transaction.id}/>
       ))}

@@ -7,7 +7,6 @@ import { Question4 } from './components/question4/_question_4';
 import { Question5 } from './components/question5/_question_5';
 import { Wrapper } from './components/common/wrapper';
 import { Question } from './components/common/question';
-import { Counter } from './components/question1/counter';
 import './app.css';
 
 export const App = () => {
